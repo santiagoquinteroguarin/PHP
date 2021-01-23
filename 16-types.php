@@ -1,7 +1,17 @@
-<?php include 'includes/header.php';
+<?php 
+declare(strict_types=1);
+include 'includes/header.php';
 
+// tipo de dato a retornar
+function usuarioAutenticado(bool $autenticado) : ?string {
+    if($autenticado) {
+        return "El Usuario esta autenticado";
+    } else {
+        return null;
+    }
+}
 
-
-
+$usuario = usuarioAutenticado(false);
+echo $usuario;
 
 include 'includes/footer.php';
